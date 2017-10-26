@@ -1,0 +1,15 @@
+<div class="container">
+
+<h1 class="center-align">Top 100 Songs!</h1>
+
+<%= link_to 'New Song', new_song_path %>
+
+    <ul>
+        <% @songs.each do |song| %>
+            <li>
+            <%= link_to  song.title, song_path(song) %>
+            </li>
+        <% end %>
+    </ul>
+</div>
+
